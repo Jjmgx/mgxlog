@@ -1,0 +1,2 @@
+# mgxlog
+log
