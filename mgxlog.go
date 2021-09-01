@@ -227,7 +227,7 @@ func (ml *MgxLog) changeFile() {
 
 func (ml *MgxLog) getHead(qz string) string {
 	t := time.Now()
-	_, file, line, ok := runtime.Caller(2)
+	_, file, line, ok := runtime.Caller(3)
 	if !ok {
 		file = "???"
 		line = 0
