@@ -155,7 +155,7 @@ func (ml *MgxLog) outf(lx string, stat int, f string, v ...interface{}) {
 	}
 }
 func (ml *MgxLog) out(lx string, stat int, v ...interface{}) {
-	str := ml.getHead(lx) + fmt.Sprintln(v...)
+	str := ml.getHead(lx) + fmt.Sprint(v...) + "\r\n"
 	if stat == LDefault || stat == LStdOnly {
 		ml.mu.Lock()
 		os.Stderr.WriteString(str)
